@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas — Production Flutter Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Anas, a Flutter Developer from Calicut, Kerala. Building high-performance mobile apps with real-time calling, LMS platforms, CRMs, and e-commerce.">
+  <meta name="theme-color" content="#1B1030">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo" aria-label="Anas Portfolio Home">
+        Anas<span class="logo-dot">.</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="mailto:anas.engineer.in@gmail.com" class="nav-email-link">anas.engineer.in@gmail.com</a>
+        <a href="#contact" class="btn btn-primary">Let's talk</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu">
+    <div class="drawer-header">
+      <div class="logo">Anas<span class="logo-dot">.</span></div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#skills" class="drawer-link">Skills</a></li>
+      <li><a href="#experience" class="drawer-link">Experience</a></li>
+      <li><a href="#projects" class="drawer-link">Projects</a></li>
+      <li><a href="#education" class="drawer-link">Education</a></li>
+    </ul>
+    <div class="drawer-actions">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Let's talk</a>
+      <a href="mailto:anas.engineer.in@gmail.com" class="btn btn-ghost" style="width: 100%;">Email me</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Open to Flutter roles</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Mobile apps that feel <span class="text-accent-violet">instant</span>, not eventual.
+          </h1>
+
+          <p class="hero-subtext">
+            I'm Anas, a Flutter developer from Calicut, Kerala. I build production mobile apps — real-time calling, LMS platforms, CRMs, and e-commerce — with clean state management and interfaces that respond the moment you touch them.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn btn-primary">See the work</a>
+            <a href="mailto:anas.engineer.in@gmail.com" class="btn btn-ghost">anas.engineer.in@gmail.com</a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number-label">
+                <span class="num">3</span> · Companies
+              </div>
+              <div class="stat-desc">worked with</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number-label">
+                <span class="num">7+</span> · Shipped
+              </div>
+              <div class="stat-desc">Flutter apps</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number-label">
+                <span class="num">3</span> · Backends
+              </div>
+              <div class="stat-desc">Firebase, Supabase, REST</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup: ZEGOCLOUD SDK Incoming Call UI -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-shell">
+            <div class="phone-screen" id="phoneScreen">
+              <div class="phone-notch">
+                <div class="notch-camera"></div>
+              </div>
+
+              <div class="phone-header-sdk">
+                <span class="sdk-badge">ZEGOCLOUD SDK</span>
+                <span class="call-status-label" id="callStatusLabel">INCOMING VOICE CALL...</span>
+              </div>
+
+              <div class="phone-caller-center">
+                <div class="avatar-wrapper">
+                  <div class="avatar-ring-outer"></div>
+                  <div class="avatar-ring"></div>
+                  <div class="avatar-img">EB</div>
+                </div>
+                <h2 class="caller-name">Executive</h2>
+                <div class="caller-role">Boliyo Platform</div>
+
+                <!-- Animated Waveform SVG Bars -->
+                <div class="audio-waveform" aria-hidden="true">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+
+              <!-- Action Controls: Amber Accept & Red Decline -->
+              <div class="phone-actions" id="phoneActions">
+                <button class="phone-action-btn" id="declineCallBtn" aria-label="Decline incoming call">
+                  <div class="icon-circle decline">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-3.33-2.67 19.42 19.42 0 0 1-2.67-3.33 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91" transform="rotate(135 12 12)"></path>
+                    </svg>
+                  </div>
+                  <span class="action-label">Decline</span>
+                </button>
+
+                <button class="phone-action-btn" id="acceptCallBtn" aria-label="Accept incoming call">
+                  <div class="icon-circle accept">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <span class="action-label">Accept</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-card">
+          <div class="section-header">
+            <h2 class="section-title">From Figma frame to shipped build.</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                Started at Bridgeon Solutions as a Flutter trainee — designed app prototypes, set up CI/CD with Fastlane, shipped apps on Firebase and Supabase. Around the same time, contributed to Kodlar Innovations LLP's internal CRM as a trainee. Now at Ametzo Technologies building real-time voice/video calling with ZEGOCLOUD SDK and connecting to secure REST and cloud backends.
+              </p>
+              <p>
+                Work sits between state management that stays predictable as an app grows, and interfaces that feel immediate — call screens, live progress trackers, dashboards that don't make people wait.
+              </p>
+            </div>
+
+            <div class="fact-grid">
+              <div class="fact-item">
+                <div class="fact-label">Location</div>
+                <div class="fact-value">Calicut, Kerala, India</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Currently</div>
+                <div class="fact-value">Flutter Developer, Ametzo Technologies</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Studying</div>
+                <div class="fact-value">BCA, IGNOU (2025–Present)</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-label">Find me on</div>
+                <div class="fact-value">
+                  <a href="https://github.com/Anas-114" target="_blank" rel="noopener noreferrer" class="fact-link">
+                    github.com/Anas-114
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">A comprehensive breakdown of frameworks, state patterns, backends, and tooling I use daily.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: Languages -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">⚡</span> Languages
+            </h3>
+            <div class="chips-row">
+              <span class="chip">Dart</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">SQL</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Frameworks & Libraries -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">📱</span> Frameworks & Libraries
+            </h3>
+            <div class="chips-row">
+              <span class="chip">Flutter (Mobile & Web)</span>
+              <span class="chip">React</span>
+              <span class="chip">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Card 3: State Management -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">🔄</span> State Management
+            </h3>
+            <div class="chips-row">
+              <span class="chip">Provider</span>
+              <span class="chip">GetX</span>
+              <span class="chip">Riverpod</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Backend & APIs -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">☁️</span> Backend & APIs
+            </h3>
+            <div class="chips-row">
+              <span class="chip">REST API</span>
+              <span class="chip">Dio Client</span>
+              <span class="chip">Firebase Auth/Firestore/FCM/Storage</span>
+              <span class="chip">Supabase</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Real-Time & Tools -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">🎙️</span> Real-Time & Tools
+            </h3>
+            <div class="chips-row">
+              <span class="chip">ZEGOCLOUD Voice & Video SDK</span>
+              <span class="chip">Postman</span>
+              <span class="chip">JWT Auth</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Local Storage -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">💾</span> Local Storage
+            </h3>
+            <div class="chips-row">
+              <span class="chip">Hive</span>
+              <span class="chip">SQLite</span>
+              <span class="chip">SharedPreferences</span>
+            </div>
+          </div>
+
+          <!-- Card 7: Architecture & Ops -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">🏗️</span> Architecture & Ops
+            </h3>
+            <div class="chips-row">
+              <span class="chip">MVC</span>
+              <span class="chip">MVVM</span>
+              <span class="chip">Clean Architecture</span>
+              <span class="chip">CI/CD (Fastlane)</span>
+              <span class="chip">Agile/Scrum</span>
+            </div>
+          </div>
+
+          <!-- Card 8: UI/UX -->
+          <div class="skill-card">
+            <h3 class="skill-category-title">
+              <span class="title-icon">🎨</span> UI/UX
+            </h3>
+            <div class="chips-row">
+              <span class="chip">Figma</span>
+              <span class="chip">Dribbble</span>
+              <span class="chip">Responsive Design</span>
+              <span class="chip">Complex Animations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">My professional journey delivering production mobile applications and scalable feature setups.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1: Ametzo Technologies -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Flutter Developer</h3>
+                <div class="timeline-company-meta">
+                  <span class="timeline-company">Ametzo Technologies</span>
+                  <span>·</span>
+                  <span>Aluva, Kochi, Kerala</span>
+                  <span>·</span>
+                  <span class="timeline-period">Nov 2025 — May 2026</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Developed and scaled production-grade Flutter apps using Provider for state management.</li>
+                <li>Integrated REST APIs with Dio, including bearer token auth and universal error handling.</li>
+                <li>Built real-time voice/video calling via ZEGOCLOUD SDK.</li>
+                <li>Engineered full call lifecycles: incoming/outgoing flows, accept/reject states, termination routines.</li>
+                <li>Connected apps to Firebase and Supabase backends.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="chip">Flutter</span>
+                <span class="chip">Provider</span>
+                <span class="chip">Dio</span>
+                <span class="chip">ZEGOCLOUD</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Bridgeon Solutions -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Flutter Developer Trainee</h3>
+                <div class="timeline-company-meta">
+                  <span class="timeline-company">Bridgeon Solutions</span>
+                  <span>·</span>
+                  <span>Calicut, Kerala</span>
+                  <span>·</span>
+                  <span class="timeline-period">Jun 2024 — Oct 2025</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Designed 10+ app prototypes in Figma, improving interface efficiency by 30%.</li>
+                <li>Ran Agile Scrum ceremonies, raising sprint completion rates by 15%.</li>
+                <li>Set up CI/CD pipelines with Git/GitHub, cutting deployment time by 50%.</li>
+                <li>Shipped 3 production Flutter apps on Firebase/Supabase, shortening dev cycles by 30%.</li>
+                <li>Built 7 core customer-facing features at 99.9% reliability.</li>
+                <li>Resolved 50+ critical bugs, documented state workflows for onboarding.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="chip">Flutter</span>
+                <span class="chip">Figma</span>
+                <span class="chip">CI/CD</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">Scrum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Kodlar Innovations LLP -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Flutter Developer Intern</h3>
+                <div class="timeline-company-meta">
+                  <span class="timeline-company">Kodlar Innovations LLP</span>
+                  <span>·</span>
+                  <span>Chelambra, Kerala</span>
+                  <span>·</span>
+                  <span class="timeline-period">2024 — 2025</span>
+                </div>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Contributed to Kodlar CRM, an internal system for managing leads, tasks, campaigns, and customer accounts.</li>
+                <li>Built a set of Flutter screens covering auth (login, signup, password reset) against a Figma design system.</li>
+                <li>Wired screens to backend endpoints for leads and task management modules.</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="chip">Flutter</span>
+                <span class="chip">Figma</span>
+                <span class="chip">CRM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Real-world applications shipped across LMS, real-time calling, CRM, and e-commerce domains.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Ametzo Academy -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-violet">AA</div>
+            <h3 class="project-title">Ametzo Academy</h3>
+            <p class="project-desc">
+              LMS mobile app featuring seamless course browsing, video lessons with state preservation, real-time progress tracking, and secure phone-OTP authentication.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Provider</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Boliyo -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-amber">BO</div>
+            <h3 class="project-title">Boliyo</h3>
+            <p class="project-desc">
+              Real-time calling platform with separate User and Executive applications, ZEGOCLOUD audio/video calling engines, and an integrated coin-based calling system.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">ZEGOCLOUD SDK</span>
+              <span class="chip">SharedPreferences</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Kodlar CRM -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-violet">KC</div>
+            <h3 class="project-title">Kodlar CRM</h3>
+            <p class="project-desc">
+              Contributed to the mobile transition of a CRM built for Kodlar Innovations LLP — constructed a set of pixel-perfect screens against a Figma design system and wired them to backend API endpoints.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">Dio</span>
+              <span class="chip">Provider</span>
+              <span class="chip">Figma</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Surprez -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-amber">SU</div>
+            <h3 class="project-title">Surprez</h3>
+            <p class="project-desc">
+              Multi-vendor gifting e-commerce app featuring a modular auth/product/cart/vendor architecture, dynamic search filters, and a resilient hybrid state setup.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">Provider</span>
+              <span class="chip">GetX</span>
+            </div>
+          </article>
+
+          <!-- Project 5: De-Addiction Tracker -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-violet">DT</div>
+            <h3 class="project-title">De-Addiction Tracker</h3>
+            <p class="project-desc">
+              Offline-first wellness tracker with 50+ guided tasks, supporting 100+ active users with a 35% retention lift after an intuitive responsive UI redesign.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">Provider</span>
+              <span class="chip">Hive</span>
+            </div>
+          </article>
+
+          <!-- Project 6: Fake Store E-Commerce -->
+          <article class="project-card">
+            <div class="project-icon-wrapper icon-amber">FS</div>
+            <h3 class="project-title">Fake Store E-Commerce</h3>
+            <p class="project-desc">
+              High-performance shopping app with auth, product search, cart, and wishlists integrated against Fake Store API, featuring local caching that cut network latency by 30%.
+            </p>
+            <div class="project-stack">
+              <span class="chip">Flutter</span>
+              <span class="chip">Dio</span>
+              <span class="chip">JWT</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic background and continuous learning foundations.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Card 1: BCA IGNOU -->
+          <div class="education-card">
+            <div class="edu-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <h3 class="edu-degree">Bachelor in Computer Applications (BCA)</h3>
+              <div class="edu-institution">IGNOU University</div>
+              <div class="edu-location-year">Delhi, India · 2025 — Present</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Higher Secondary -->
+          <div class="education-card">
+            <div class="edu-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <div class="edu-details">
+              <h3 class="edu-degree">Higher Secondary · Science (Biology)</h3>
+              <div class="edu-institution">State Higher Secondary Board</div>
+              <div class="edu-location-year">Calicut, Kerala · 2022 — 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-panel">
+          <h2 class="contact-title">Have a Flutter app to build?</h2>
+          <p class="contact-subtext">
+            I'm open to full-time and contract roles — mobile apps, real-time features, or backend integrations.
+          </p>
+          <div class="contact-actions">
+            <a href="mailto:anas.engineer.in@gmail.com" class="btn btn-amber">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              anas.engineer.in@gmail.com
+            </a>
+            <a href="tel:+916235008904" class="btn btn-ghost" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              +91 6235008904
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        © 2026 Anas. Built with Flutter on the mind.
+      </div>
+      <ul class="footer-links">
+        <li>
+          <a href="https://github.com/Anas-114" target="_blank" rel="noopener noreferrer" class="footer-link">
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/anas-mp-b6104a324" target="_blank" rel="noopener noreferrer" class="footer-link">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com/u/anasmp14" target="_blank" rel="noopener noreferrer" class="footer-link">
+            LeetCode
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
